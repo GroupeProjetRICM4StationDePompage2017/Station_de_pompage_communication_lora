@@ -62,14 +62,15 @@ Ce type de trame est envoyée sur le port **SERIE** de la carte côté serveur. 
 
 ### Diagramme de communication simplifié
 
-```sequence
-Pompe-->Serveur LoRa: data
-Serveur LoRa-->PC: data
-Serveur LoRa-->Pompe: ACK
-PC-->Serveur LoRa:ordreAfaire
-Note right of Serveur LoRa:Ecoute active\n sur le port SERIE
-Serveur LoRa-->Pompe:ordreAfaire
-Pompe->Pompe:ExecuterOrdre()
-Pompe->Pompe:Dormir()
+```mermaid
+sequenceDiagram
+Pompe-->>Serveur LoRa: data
+Serveur LoRa-->>PC: data
+Serveur LoRa-->>Pompe: ACK
+PC-->>Serveur LoRa:ordreAfaire
+Note right of Serveur LoRa:Ecoute active sur le port SERIE
+Serveur LoRa-->>Pompe:ordreAfaire
+Pompe->>Pompe:ExecuterOrdre()
+Pompe->>Pompe:Dormir()
 ```
 
