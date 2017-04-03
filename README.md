@@ -35,7 +35,7 @@ Vous trouverez ci-dessous le modèle de branchement pour simuler les capteurs, e
 
 ### Informations
 * Le temps d'attente entre deux mesures doit être modifier par la variable **SLEEP_TIME**. Attention, vous devez respecter la règle des 1%.
-* La carte ne supporte pas le réveil du DeepSleep par un timer. Nous utilisons donc seulement un sleep.
+* La carte **ne supporte pas** le réveil du DeepSleep par un timer. Le reveil par une source extérieure est cependant possible (un exemple est disponible par appuis sur le bouton). Nous utilisons donc seulement un sleep.
 * Les erreurs CRC n'ont pas été traitées.
 
 ## Application partie serveur
